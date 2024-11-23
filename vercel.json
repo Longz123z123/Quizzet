@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "build": {
+    "commands": {
+      "install": "npm ci --legacy-peer-deps",
+      "build": "npm run build"
+    }
+  }
+}
