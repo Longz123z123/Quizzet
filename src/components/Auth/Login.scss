@@ -1,0 +1,131 @@
+.login-container {
+  .recaptcha-container {
+    margin-top: 20px; // Tạo khoảng cách trên cho reCAPTCHA
+    display: flex; // Sử dụng flex để căn giữa
+    justify-content: center; // Căn giữa phần reCAPTCHA
+    align-items: center; // Căn giữa dọc
+    padding: 10px 0; // Thêm khoảng cách bên trên và dưới
+
+    .g-recaptcha {
+      display: inline-block;
+      width: 100%; // Đảm bảo reCAPTCHA không vượt quá chiều rộng
+      max-width: 300px; // Giới hạn chiều rộng tối đa
+      margin-top: 10px; // Tạo khoảng cách trên cho reCAPTCHA
+    }
+
+    .g-recaptcha iframe {
+      border: none; // Xóa bỏ đường viền mặc định của iframe
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); // Thêm bóng nhẹ cho reCAPTCHA
+      border-radius: 8px; // Bo góc nhẹ cho reCAPTCHA
+    }
+  }
+  .loader-icon {
+    // margin-bottom: 14px;
+    font-size: 14px;
+    color: #04d4ff;
+    animation: spin 1s infinite linear;
+    margin-right: 5px;
+  }
+
+  @keyframes spin {
+    from {
+      transform: scale(1) rotate(0deg);
+    }
+    to {
+      transform: scale(1) rotate(360deg);
+    }
+  }
+  background-image: url('../../assets/bg1.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+
+  .header {
+    height: 45px;
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 5px 100px 0 100px;
+    gap: 15px;
+
+    .font-header-span {
+      font-family: Arial, sans-serif;
+      font-weight: bold;
+      color: black;
+    }
+
+    button {
+      font-weight: bold;
+      color: black;
+      padding: 3px 15px;
+      border: 1px solid;
+      border-radius: 5px;
+      background: white;
+      &:hover {
+        background-color: whitesmoke;
+      }
+    }
+  }
+
+  .title {
+    font-size: 25px;
+    padding: 20px 0;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    color: black;
+    text-shadow: 1px 1px 4px rgba(255, 255, 255, 0.7);
+  }
+
+  .welcome {
+    font-size: 20px;
+    padding: 20px 0;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    color: black;
+    text-shadow: 1px 1px 4px rgba(255, 255, 255, 0.7);
+  }
+
+  .content-form {
+    font-weight: bold;
+
+    input {
+      margin-bottom: 15px;
+      margin-top: 3px;
+      font-size: 16px; // Consider increasing font size for better readability
+      padding: 10px; // Improve input padding for comfort
+    }
+
+    button {
+      width: 100%;
+      height: 40px;
+      border: none;
+      margin: 20px 0;
+      border-radius: 5px;
+      color: white;
+      background: black;
+      font-family: Arial, sans-serif; // Change to a clearer font
+      font-weight: bold; // Use bold for better visibility
+
+      &:disabled {
+        background: #dddddd;
+        color: #afafaf;
+        cursor: no-drop;
+      }
+    }
+
+    .back {
+      cursor: pointer;
+      font-family: Arial, sans-serif; // Change to a clearer font
+      font-weight: normal; // Keep normal weight but consider size and color adjustments
+      color: black; // Change color to black for visibility
+      &:hover {
+        color: white; // Change hover color for better interaction feedback
+        font-weight: bold;
+      }
+    }
+  }
+}

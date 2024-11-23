@@ -1,0 +1,84 @@
+.quiz-container {
+  padding: 20px;
+  background-color: #f8f9fa; /* Màu nền nhẹ để phân biệt vùng chứa quiz */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Tạo bóng đổ nhẹ cho container */
+
+  .title {
+    font-size: 28px;
+    font-weight: 600;
+    color: #343a40; /* Màu chữ tối để dễ đọc */
+    margin-bottom: 20px; /* Khoảng cách dưới title */
+  }
+
+  legend {
+    font-size: 22px;
+    font-weight: 500;
+    color: #495057; /* Màu chữ cho legend */
+    padding: 5px 10px;
+    background-color: #e9ecef; /* Màu nền nhẹ cho legend */
+    border-radius: 4px; /* Bo góc legend */
+  }
+
+  .list-detail {
+    padding: 20px;
+    background-color: #ffffff; /* Màu nền sáng cho phần list */
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Thêm bóng đổ nhẹ */
+    margin-top: 20px; /* Khoảng cách giữa phần content và list */
+  }
+
+  /* Styling cho form elements */
+  .form-floating {
+    margin-bottom: 20px; /* Khoảng cách giữa các input */
+  }
+
+  .form-control {
+    border-radius: 8px;
+    padding: 15px;
+    font-size: 16px;
+    background-color: #f1f3f5;
+    border: 1px solid #ced4da;
+  }
+
+  .btn-warning {
+    background-color: #ffc107;
+    border-color: #ffc107;
+    color: #212529;
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: #e0a800; /* Hiệu ứng hover */
+      border-color: #e0a800;
+    }
+  }
+
+  /* Styling cho các input file */
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  input[type='file'] {
+    font-size: 16px;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: #f1f3f5;
+  }
+
+  /* Add custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #adb5bd;
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: #f8f9fa;
+  }
+}

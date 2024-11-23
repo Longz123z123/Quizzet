@@ -1,0 +1,107 @@
+.list-quiz-container {
+  background: linear-gradient(135deg, #dce4f5, #b0c4de); // Màu nền gradient
+  padding: 20px;
+  border-radius: 8px;
+  display: flex; // Sử dụng flex layout
+  flex-wrap: wrap; // Cho phép các quiz quấn lại
+  justify-content: flex-start; // Căn giữa cho các phần tử
+  max-width: 1200px; // Thiết lập chiều rộng tối đa
+  margin: 0 auto; // Căn giữa container
+  gap: 20px; // Khoảng cách giữa các card
+
+  .card {
+    flex: 0 1 calc(20% - 20px); // Mỗi card chiếm 20% chiều rộng, trừ đi khoảng cách
+    border: 1px solid #ddd; // Viền nhẹ cho card
+    border-radius: 8px; // Bo góc
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Hiệu ứng đổ bóng
+    overflow: hidden; // Ẩn các phần thừa
+    transition: transform 0.3s, box-shadow 0.3s; // Hiệu ứng khi hover
+
+    &:hover {
+      transform: translateY(-10px); // Nâng lên khi hover
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); // Đổ bóng khi hover
+    }
+
+    .card-img-top {
+      height: 150px; // Chiều cao cố định cho hình ảnh
+      object-fit: cover; // Cắt hình ảnh theo khung mà không bị méo
+    }
+
+    .card-body {
+      padding: 15px;
+
+      .card-title {
+        font-size: 18px;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 10px;
+      }
+
+      .card-text {
+        font-size: 14px;
+        color: #666;
+        margin-bottom: 15px;
+        line-height: 1.4;
+      }
+
+      .btn {
+        background-color: #007bff;
+        border: none;
+        font-size: 14px;
+        padding: 10px 15px;
+        border-radius: 4px;
+        transition: background-color 0.3s;
+
+        &:hover {
+          background-color: #0056b3;
+        }
+      }
+    }
+  }
+
+  /* Footer for pagination */
+  .pagination-footer {
+    display: flex;
+    justify-content: center; // Căn giữa
+    align-items: center;
+    margin-top: 20px;
+    width: 100%; // Chiếm hết chiều rộng
+    padding: 10px 0; // Thêm padding cho phần phân trang
+    position: relative;
+
+    .pagination {
+      display: flex;
+      justify-content: center; // Căn giữa phần tử phân trang
+      align-items: center;
+      list-style: none;
+      padding: 0;
+
+      li {
+        margin: 0 5px; // Khoảng cách giữa các liên kết phân trang
+        display: inline;
+
+        a {
+          display: block;
+          padding: 8px 12px;
+          text-decoration: none;
+          color: black; // Màu chữ
+          font-weight: bold;
+          font-size: 18px;
+          border: 1px solid transparent; // Thêm viền trong khi chưa active
+          transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+
+          &:hover {
+            background-color: #f0f8ff; // Màu nền khi hover
+            color: #0056b3; // Màu chữ khi hover
+          }
+
+          &.active {
+            background-color: #007bff; // Màu nền cho trang đang hoạt động
+            color: #fff; // Màu chữ cho trang hoạt động
+            border-color: #0056b3; // Thay đổi viền trang hoạt động
+          }
+        }
+      }
+    }
+  }
+}

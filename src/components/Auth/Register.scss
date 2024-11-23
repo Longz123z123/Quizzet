@@ -1,0 +1,118 @@
+.register-container {
+  .recaptcha-container {
+    margin-top: 20px; // Tạo khoảng cách trên cho reCAPTCHA
+    display: flex; // Sử dụng flex để căn giữa
+    justify-content: center; // Căn giữa phần reCAPTCHA
+    align-items: center; // Căn giữa dọc
+    padding: 10px 0; // Thêm khoảng cách bên trên và dưới
+
+    .g-recaptcha {
+      display: inline-block;
+      width: 100%; // Đảm bảo reCAPTCHA không vượt quá chiều rộng
+      max-width: 300px; // Giới hạn chiều rộng tối đa
+      margin-top: 10px; // Tạo khoảng cách trên cho reCAPTCHA
+    }
+
+    .g-recaptcha iframe {
+      border: none; // Xóa bỏ đường viền mặc định của iframe
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); // Thêm bóng nhẹ cho reCAPTCHA
+      border-radius: 8px; // Bo góc nhẹ cho reCAPTCHA
+    }
+  }
+  background-image: url('../../assets/bg1.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  .header {
+    height: 45px;
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 5px 100px 0 100px;
+    gap: 15px;
+
+    button {
+      font-weight: bold;
+      color: black;
+      padding: 3px 15px;
+      border-radius: 5px;
+      background: #f9f9f9;
+      border: 1px solid;
+
+      &:hover {
+        background-color: white;
+      }
+    }
+    span {
+      font-family: Arial, sans-serif;
+      font-weight: bold;
+      color: black;
+    }
+  }
+
+  .title {
+    font-size: 25px;
+    padding: 20px 0;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    color: black;
+    text-shadow: 1px 1px 4px rgba(255, 255, 255, 0.7);
+  }
+
+  .welcome {
+    font-size: 20px;
+    padding: 20px 0;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    color: black;
+    text-shadow: 1px 1px 4px rgba(255, 255, 255, 0.7);
+  }
+
+  .content-form {
+    font-weight: bold;
+
+    input {
+      margin-bottom: 15px;
+      margin-top: 3px;
+      font-size: 16px;
+      padding: 10px;
+    }
+
+    button {
+      width: 100%;
+      width: 100%;
+      height: 40px;
+      border: none;
+      border-radius: 5px;
+      margin: 20px 0;
+      color: white;
+      background: black;
+      font-family: Arial, sans-serif;
+      font-weight: bold;
+    }
+
+    .back {
+      cursor: pointer;
+      font-family: Arial, sans-serif;
+      font-weight: normal;
+      color: black;
+      color: white;
+      font-weight: bold;
+    }
+  }
+
+  .pass-group {
+    position: relative;
+
+    .icons-eye {
+      cursor: pointer;
+      position: absolute;
+      right: 10px;
+      bottom: 10px;
+    }
+  }
+}
