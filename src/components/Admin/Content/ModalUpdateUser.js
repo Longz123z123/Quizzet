@@ -67,7 +67,6 @@ const ModalUpdateUser = (props) => {
     }
 
     let data = await putUpdateUser(dataUpdate.id, username, role, image);
-    // console.log("Component", data)
     if (data && data.EC === 0) {
       toast.success(data.EM);
       handleClose();
@@ -129,10 +128,7 @@ const ModalUpdateUser = (props) => {
             </div>
             <div className="col-md-4">
               <label className="form-label">Role</label>
-              <select
-                className="form-select"
-                onChange={(event) => setRole(event.target.value)}
-              >
+              <select className="form-select" onChange={(event) => setRole(event.target.value)}>
                 <option value="USER">USER</option>
                 <option value="ADMIN">ADMIN</option>
               </select>
@@ -149,11 +145,7 @@ const ModalUpdateUser = (props) => {
               />
             </div>
             <div className="col-md-12 img-preview">
-              {previewImage ? (
-                <img src={previewImage} />
-              ) : (
-                <span>Preview Image</span>
-              )}
+              {previewImage ? <img src={previewImage} /> : <span>Preview Image</span>}
             </div>
           </form>
         </Modal.Body>

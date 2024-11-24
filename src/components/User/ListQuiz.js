@@ -31,7 +31,6 @@ const ListQuiz = (props) => {
   const handlePageChange = (selectedPage) => {
     setCurrentPage(selectedPage.selected); // Cập nhật trang hiện tại
   };
-  console.log('check quiz', arrQuiz);
   return (
     <>
       {/* Container chính của ListQuiz */}
