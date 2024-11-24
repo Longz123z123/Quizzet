@@ -31,9 +31,10 @@
           "key": "Referrer-Policy",
           "value": "no-referrer"
         },
+
         {
           "key": "Set-Cookie",
-          "value": "SameSite=Strict; Secure; HttpOnly"
+          "value": "SameSite=Lax; Secure; HttpOnly"
         },
         {
           "key": "X-Permitted-Cross-Domain-Policies",
