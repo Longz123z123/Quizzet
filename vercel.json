@@ -33,10 +33,6 @@
         },
 
         {
-          "key": "Set-Cookie",
-          "value": "SameSite=Lax; Secure; HttpOnly"
-        },
-        {
           "key": "X-Permitted-Cross-Domain-Policies",
           "value": "none"
         },
