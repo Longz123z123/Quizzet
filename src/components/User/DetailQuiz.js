@@ -140,7 +140,11 @@ const DetailQuiz = (props) => {
   };
 
   const handleGoToQuizzes = () => {
-    navigate('/quizzes'); // Chuyển hướng tới trang Quizzes
+    const confirmed = window.confirm('Bạn chắc chắn muốn thoát không?');
+
+    if (confirmed) {
+      navigate('/quizzes'); // Chuyển hướng tới trang Quizzes
+    }
   };
 
   const handleCheckBox = (answerId, questionId) => {
