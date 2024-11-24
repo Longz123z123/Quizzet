@@ -41,7 +41,7 @@
         },
         {
           "key": "Content-Security-Policy",
-          "value": "default-src 'self'; script-src 'self' https://trustedscripts.example.com https://www.google.com https://www.gstatic.com https://www.recaptcha.net; style-src 'self' https://fonts.googleapis.com; frame-src https://www.google.com; "
+          "value": "default-src 'self'; script-src 'self' https://www.google.com https://www.gstatic.com https://www.recaptcha.net; style-src 'self' https://fonts.googleapis.com; img-src 'self' https://www.gstatic.com; frame-src https://www.google.com; connect-src 'self' https://www.google.com; object-src 'none';"
         },
         {
           "key": "Expect-CT",
