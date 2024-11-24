@@ -32,12 +32,5 @@
         }
       ]
     }
-  ],
-  "notes": {
-    "Content-Security-Policy": "Giúp ngăn chặn tấn công XSS bằng cách kiểm soát nguồn tài nguyên.",
-    "Strict-Transport-Security": "Yêu cầu HTTPS, bảo vệ khỏi tấn công MITM.",
-    "X-Frame-Options": "Ngăn ngừa việc nhúng trang trong iframe (bảo vệ Clickjacking).",
-    "X-Content-Type-Options": "Ngăn trình duyệt tự động nhận diện MIME (tránh MIME Sniffing).",
-    "Referrer-Policy": "Không gửi thông tin referrer (bảo vệ quyền riêng tư)."
-  }
+  ]
 }
