@@ -41,7 +41,7 @@
         },
         {
           "key": "Content-Security-Policy",
-          "value": "default-src 'self'; script-src 'self' https://www.google.com https://www.gstatic.com https://www.recaptcha.net https://vercel.live; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; img-src 'self' https://vercel.live data:; font-src 'self' https://fonts.gstatic.com; frame-src https://www.google.com https://vercel.live; connect-src 'self' http://localhost:8081; object-src 'none';"
+          "value": "default-src 'self' data:; script-src 'self' https://www.google.com https://www.gstatic.com https://www.recaptcha.net https://vercel.live; style-src 'self' https://fonts.googleapis.com <URL_REPLACE> 'unsafe-inline'; img-src 'self' https://vercel.live https://vercel.com/api/www/avatar/ data:; font-src 'self' https://fonts.gstatic.com; frame-src https://www.google.com https://vercel.live; connect-src 'self' http://localhost:8081 <URL_REPLACE>; media-src 'self' data:; object-src 'none';"
         },
         {
           "key": "Expect-CT",
