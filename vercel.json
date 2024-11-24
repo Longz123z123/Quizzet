@@ -5,5 +5,39 @@
       "NODE_ENV": "production"
     }
   },
-  "rewrites": [{ "source": "/(.*)", "destination": "/" }]
+  "rewrites": [{ "source": "/(.*)", "destination": "/" }],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'; script-src 'self' https://trusted-cdn.com; style-src 'self' 'unsafe-inline';"
+        },
+        {
+          "key": "Strict-Transport-Security",
+          "value": "max-age=31536000; includeSubDomains; preload"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "no-referrer"
+        }
+      ]
+    }
+  ],
+  "notes": {
+    "Content-Security-Policy": "Giúp ngăn chặn tấn công XSS bằng cách kiểm soát nguồn tài nguyên.",
+    "Strict-Transport-Security": "Yêu cầu HTTPS, bảo vệ khỏi tấn công MITM.",
+    "X-Frame-Options": "Ngăn ngừa việc nhúng trang trong iframe (bảo vệ Clickjacking).",
+    "X-Content-Type-Options": "Ngăn trình duyệt tự động nhận diện MIME (tránh MIME Sniffing).",
+    "Referrer-Policy": "Không gửi thông tin referrer (bảo vệ quyền riêng tư)."
+  }
 }

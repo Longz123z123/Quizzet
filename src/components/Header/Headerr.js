@@ -64,9 +64,15 @@ const Header = () => {
             <NavLink to={`/quizzes`} className="nav-link">
               Quizzes
             </NavLink>
-            <NavLink to={`/admins`} className="nav-link" onClick={openAdminTab}>
+            {isAuthenticated &&
+              account.role === 'ADMIN' && ( // Chỉ hiển thị khi vai trò là ADMIN
+                <NavLink to={`/admins`} className="nav-link" onClick={openAdminTab}>
+                  Admin
+                </NavLink>
+              )}
+            {/* <NavLink to={`/admins`} className="nav-link" onClick={openAdminTab}>
               Admin
-            </NavLink>
+            </NavLink> */}
           </Nav>
           <Nav>
             {isAuthenticated === false ? (
