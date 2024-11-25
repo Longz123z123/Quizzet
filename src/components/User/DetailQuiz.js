@@ -199,7 +199,7 @@ const DetailQuiz = (props) => {
             Finish
           </button>
           <button className="btn btn-danger" onClick={handleGoToQuizzes}>
-            Kết thúc
+            Thoát
           </button>
         </div>
       </div>

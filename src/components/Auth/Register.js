@@ -24,6 +24,13 @@ const Register = (props) => {
       );
   };
 
+  // Hàm kiểm tra mật khẩu mạnh
+  const isStrongPassword = (password) => {
+    const strongPasswordRegex =
+      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+    return strongPasswordRegex.test(password);
+  };
+
   const handleRegister = async () => {
     // Validate email and password
     const isValidEmail = validateEmail(email);
@@ -31,9 +38,10 @@ const Register = (props) => {
       toast.error('Invalid email');
       return;
     }
-
-    if (!password) {
-      toast.error('Invalid password');
+    if (!isStrongPassword(password)) {
+      toast.error(
+        'Mật khẩu phải dài ít nhất 8 ký tự, bao gồm ít nhất một chữ cái viết hoa, một chữ cái viết thường, một chữ số và một ký tự đặc biệt'
+      );
       return;
     }
 
